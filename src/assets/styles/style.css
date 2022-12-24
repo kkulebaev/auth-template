@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'Mona';
-  src: url('../fonts/Mona-Sans.woff2') format('woff2'), url('../fonts/Mona-Sans.woff') format('woff'), url('../fonts/Mona-Sans.ttf') format('truetype');
-}
+@import './fonts.css';
 
 :root {
   color-scheme: light dark;
