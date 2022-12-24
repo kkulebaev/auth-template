@@ -22,7 +22,7 @@ export const LoginForm = () => {
   return (
     <form class='flex flex-col gap-4 p-6 b-2 b-solid b-zinc-7 b-rd-2 bg-zinc-8' onSubmit={e => onSubmitHandler(e)}>
       <div class='flex flex-col gap-1'>
-        <label for='username'> Login </label>
+        <label for='username'> Username or email address </label>
         <input id='username' class='w-xs' type='text' value={username()} name='username' required onInput={e => usernameHandler(e)} />
       </div>
       <div class='flex flex-col gap-1'>
