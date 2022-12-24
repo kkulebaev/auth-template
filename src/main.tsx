@@ -1,28 +1,25 @@
 import { createSignal } from 'solid-js'
 import { render } from 'solid-js/web'
 import './style.css'
+import 'virtual:uno.css'
 
 const App = () => {
   const [counter, setCounter] = createSignal(0)
 
   return (
-    <div>
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo" alt="Vite logo" />
-      </a>
-      <a href="https://www.solidjs.com/" target="_blank">
-        <img src="/solid.svg" class="logo" alt="Solid logo" />
-      </a>
-      <h1>Vite + Solid</h1>
-      <div class="card">
-        <button onClick={(e) => {
-          e.preventDefault();
-          setCounter(counter() + 1)
-        }}>count is {counter()}</button>
+    <div
+      class='h-full text-center flex select-none all:transition-400'
+      onClick={e => {
+        e.preventDefault()
+        setCounter(counter() + 1)
+      }}>
+      <div class='ma'>
+        <div class='text-5xl fw100 animate-bounce-alt animate-count-infinite animate-duration-1s'>unocss</div>
+        <div class='op30 text-lg fw300 m1'>The instant on-demand Atomic CSS engine. {counter()}</div>
+        <div class='m2 flex justify-center text-2xl op30'>
+          <a class='i-carbon-logo-github text-inherit' href='https://github.com/unocss/unocss' target='_blank'></a>
+        </div>
       </div>
-      <p class="read-the-docs">
-        Click on the Vite and Solid logos to learn more
-      </p>
     </div>
   )
 }
