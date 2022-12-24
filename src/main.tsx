@@ -8,9 +8,9 @@ const App = () => {
     <div class='h-full select-none all:transition-400'>
       <LoginForm />
       <p class='text-center'>
-        New to AuthTemplate?&nbsp;
+        Don't have an account?&nbsp;
         <a class='c-indigo hover-c-rose' href='#'>
-          Create an account.
+          Sign Up
         </a>
       </p>
     </div>
