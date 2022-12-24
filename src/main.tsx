@@ -9,7 +9,7 @@ const App = () => {
       <LoginForm />
       <p class='text-center'>
         Don't have an account?&nbsp;
-        <a class='c-indigo hover-c-rose' href='#'>
+        <a class='c-indigo hover-no-underline' href='#'>
           Sign Up
         </a>
       </p>
