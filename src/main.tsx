@@ -1,6 +1,6 @@
 import { render } from 'solid-js/web'
 import { LoginForm } from './components/LoginForm'
-import './style.css'
+import './assets/styles/style.css'
 import 'virtual:uno.css'
 
 const App = () => {
