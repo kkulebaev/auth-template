@@ -23,11 +23,11 @@ export const LoginForm = () => {
     <form class='flex flex-col gap-4 p-6 b-2 b-solid b-zinc-7 b-rd-2 bg-zinc-8' onSubmit={e => onSubmitHandler(e)}>
       <div class='flex flex-col gap-1'>
         <label for='username'> Login </label>
-        <input id='username' class='w-xs' type='text' value={username()} name='username' onInput={e => usernameHandler(e)} />
+        <input id='username' class='w-xs' type='text' value={username()} name='username' required onInput={e => usernameHandler(e)} />
       </div>
       <div class='flex flex-col gap-1'>
         <label for='password'> Password </label>
-        <input id='password' class='w-xs' type='text' value={password()} name='password' onInput={e => passwordHandler(e)} />
+        <input id='password' class='w-xs' type='password' value={password()} name='password' required onInput={e => passwordHandler(e)} />
       </div>
       <button class='b-1 b-solid b-transparent bg-zinc-9 hover-b-indigo' type='submit'>
         Sign in
