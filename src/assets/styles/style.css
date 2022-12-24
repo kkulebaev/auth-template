@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Mona';
-  src: url('./assets/fonts/Mona-Sans.woff2') format('woff2'), url('./assets/fonts/Mona-Sans.woff') format('woff'), url('./assets/fonts/Mona-Sans.ttf') format('truetype');
+  src: url('../fonts/Mona-Sans.woff2') format('woff2'), url('../fonts/Mona-Sans.woff') format('woff'), url('../fonts/Mona-Sans.ttf') format('truetype');
 }
 
 :root {
