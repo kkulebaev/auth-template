@@ -7,12 +7,19 @@ export const LoginForm = () => {
   const [username, setUsername] = createSignal('')
   const [password, setPassword] = createSignal('')
 
-  const [error, setError] = createSignal({
+  const DEFAULT_ERRORS = () => ({
     username: '',
     password: '',
   })
 
+  const [error, setError] = createSignal(DEFAULT_ERRORS())
+
+  const clearErrors = () => {
+    setError(DEFAULT_ERRORS())
+  }
+
   const inputHandler = (e: InputEvent, cb: Setter<string>) => {
+    clearErrors()
     const el = e.target as HTMLInputElement
     cb(el.value)
   }
