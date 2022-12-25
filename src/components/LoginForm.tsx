@@ -1,6 +1,7 @@
 import type { Setter } from 'solid-js'
 import { createSignal } from 'solid-js'
 import { FormHeader } from './FormHeader'
+import { AppButton } from './AppButton'
 
 export const LoginForm = () => {
   const [username, setUsername] = createSignal('')
@@ -38,9 +39,7 @@ export const LoginForm = () => {
           {error().password}
         </span>
       </div>
-      <button class='mt-4 b-1 b-solid b-transparent bg-zinc-9 hover-b-indigo' type='submit'>
-        Sign in
-      </button>
+      <AppButton label='Sign In' type='submit' />
     </form>
   )
 }
