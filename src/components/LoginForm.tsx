@@ -6,6 +6,7 @@ import { AppButton } from './AppButton'
 export const LoginForm = () => {
   const [username, setUsername] = createSignal('')
   const [password, setPassword] = createSignal('')
+  const [isLoading, setIsLoading] = createSignal(false)
 
   const DEFAULT_ERRORS = () => ({
     username: '',
@@ -26,7 +27,11 @@ export const LoginForm = () => {
 
   const onSubmitHandler = (e: Event) => {
     e.preventDefault()
-    setError({ username: username(), password: password() })
+    setIsLoading(true)
+    setTimeout(() => {
+      setIsLoading(false)
+      setError({ username: username(), password: password() })
+    }, 2000)
   }
 
   return (
@@ -46,7 +51,7 @@ export const LoginForm = () => {
           {error().password}
         </span>
       </div>
-      <AppButton label='Sign In' type='submit' />
+      <AppButton label='Sign In' type='submit' loading={isLoading()} />
     </form>
   )
 }
