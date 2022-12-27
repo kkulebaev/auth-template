@@ -1,6 +1,6 @@
-# Vite Solid Template
+# Auth Template
 
-A Solid Vite starter template.
+Demo available: https://auth-template.onrender.com
 
 ## Available scripts
 
