@@ -1,6 +1,7 @@
 import type { Setter } from 'solid-js'
 import { createSignal } from 'solid-js'
 import { AppButton } from './AppButton'
+import { PasswordEye } from './PasswordEye'
 
 export const LoginForm = () => {
   const [username, setUsername] = createSignal('')
@@ -83,10 +84,7 @@ export const LoginForm = () => {
             spellcheck={false}
             onInput={e => inputHandler(e, setPassword)}
           />
-          <button type='button' class='eyeball' onClick={toggleShowPassword}>
-            <div class='eye'></div>
-          </button>
-          <div class='eye__beam'></div>
+          <PasswordEye onEyeClickHandler={toggleShowPassword} />
         </div>
         <span class='text-red' classList={{ 'op-0': !error().password }}>
           {error().password}
