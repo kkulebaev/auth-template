@@ -1,0 +1,48 @@
+:root {
+  --bgColor: white;
+  --inputColor: #00b896;
+  --outlineColor: dodgerblue;
+  --beamColor: yellow;
+}
+
+body.show-password {
+  --bgColor: black;
+  --inputColor: white;
+  --outlineColor: var(--beamColor);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #00ffad;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #180148;
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+label:focus,
+input:focus,
+button:focus {
+  outline: 3px solid var(--outlineColor);
+  outline-offset: 2px;
+}
+
+button:active {
+  transform: translateY(2px);
+}
