@@ -46,7 +46,18 @@ export const LoginForm = () => {
           Username or email address
         </label>
         <div class='relative'>
-          <input id='username' class='text-2xl p-2' type='text' value={username()} name='username' required onInput={e => inputHandler(e, setUsername)} />
+          <input
+            id='username'
+            class='text-2xl p-2'
+            type='text'
+            value={username()}
+            name='username'
+            required
+            autocomplete='off'
+            autocapitalize='off'
+            spellcheck={false}
+            onInput={e => inputHandler(e, setUsername)}
+          />
         </div>
         <span class='text-red' classList={{ 'op-0': !error().username }}>
           {error().username}
@@ -64,6 +75,9 @@ export const LoginForm = () => {
             value={password()}
             name='password'
             required
+            autocomplete='off'
+            autocapitalize='off'
+            spellcheck={false}
             onInput={e => inputHandler(e, setPassword)}
           />
           <button type='button' class='eyeball' onClick={toggleShowPassword}>
