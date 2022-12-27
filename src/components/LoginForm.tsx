@@ -48,11 +48,12 @@ export const LoginForm = () => {
         <div class='relative'>
           <input
             id='username'
-            class='text-2xl p-2'
+            class='text-2xl p-2 p-r-4 text-white'
             type='text'
             value={username()}
             name='username'
             required
+            maxlength={25}
             autocomplete='off'
             autocapitalize='off'
             spellcheck={false}
@@ -70,11 +71,13 @@ export const LoginForm = () => {
         <div class='relative'>
           <input
             id='password'
-            class='text-2xl p-2'
+            class='text-2xl p-2 p-r-12 text-white'
             type={showPassword() ? 'text' : 'password'}
+            classList={{ 'text-black': showPassword() }}
             value={password()}
             name='password'
             required
+            maxlength={25}
             autocomplete='off'
             autocapitalize='off'
             spellcheck={false}

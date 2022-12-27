@@ -59,7 +59,7 @@
   width: 100vw;
   height: 25vw;
   z-index: 1;
-  mix-blend-mode: multiply;
+  mix-blend-mode: difference;
   transition: transform 200ms ease-out;
   transform-origin: 100% 50%;
   transform: translateY(-50%) rotate(var(--beamDegrees, 0));
