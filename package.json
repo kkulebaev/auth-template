@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "babel-preset-solid": "1.6.6",
+    "babel-preset-solid": "1.6.13",
     "solid-devtools": "0.24.4",
     "typescript": "4.9.4",
     "unocss": "0.48.0",
